@@ -15,9 +15,43 @@
 </script>
 
 <script>
+var userId = 2;
+var nameElement;
+var name;
+var emailElement;
+var email;
+var webUrlElement;
+var webUrl;
 var db = firebase.database();
-function writeUserData(userId, name, email, webUrl) {
+function writeUserData() {
 	// 這個例子是會創一個 users 的 collection
+
+	nameElement = document.getElementById("data1");
+ 	name = nameElement.value;
+  	emailElement = document.getElementById("data2");
+ 	email = emailElement.value;
+ 	webUrlElement = document.getElementById("data3");
+ 	webUrl = emailElement.value;
+ 	
+
+ 	db.ref('/users/').once('value', function (snapshot) {
+		var data = snapshot.val();
+	    userId = data.length;
+	    console.log(userId);
+
+	    writeUserData2();
+
+	});
+
+
+
+
+	
+}
+function writeUserData2(){
+
+	console.log(userId);
+	
 	db.ref('/users/' + userId).set({
 		username: name,
 	    email: email,
@@ -25,23 +59,37 @@ function writeUserData(userId, name, email, webUrl) {
 	})
 	.then(function () {alert("建立成功");})
 	.catch(function () {alert("伺服器發生錯誤，請稍後再試");});
+
 }
 //writeUserData(1, 'Gary', 'gary@nutc.edu.tw', 'http://gary.tw')
 //writeUserData(2, 'Jason', 'jason@nutc.edu.tw', 'http://jason.tw')
 </script>
 
 <script>
-function readUserData(userId) {
-	db.ref('/users/' + userId).once('value', function (snapshot) {
+function readUserData() {
+	db.ref('/users/').once('value', function (snapshot) {
 		var data = snapshot.val();
-	    console.log(data);
+	    console.log(data.length);
 	});
 }
 </script>
 
 <body>
-	<button onclick="writeUserData(1, 'Gary', 'gary@nutc.edu.tw', 'http://gary.tw')"> write</button>
-	<button onclick="readUserData(1)"> read</button>
+      <fieldset>
+        <legend>Personal information</legend>
+        Name:<br>
+        <input id="data1" type="text" name="name">
+        <br>
+        Email:<br>
+        <input id="data2" type="text" name="email">
+        <br>
+        WebUrl:<br>
+        <input id="data3" type="text" name="webUrl">
+        <br><br>
+      </fieldset>
+    <button onclick="writeUserData();"> write</button>
+ 	<button onclick="readUserData();"> read</button>
+   
 </body>
 
 
