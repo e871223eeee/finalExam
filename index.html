@@ -54,7 +54,12 @@
           }
         });  
       });         
-    </script>
+  </script>
+  <script>
+    function remind(){
+      alert("請先進行登入");
+    }
+  </script>
 </head>
 
 <body>
@@ -76,7 +81,7 @@
             <a class="nav-link" href="about.html">關於我</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contact.html">聊天室</a>
+            <a class="nav-link" onclick="remind()">聊天室</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="signUpView.html">登入與註冊</a>
