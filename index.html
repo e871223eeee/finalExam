@@ -21,6 +21,39 @@
   <!-- Custom styles for this template -->
   <link href="css/clean-blog.min.css" rel="stylesheet">
 
+  <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.7.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyA1pst5wov2RW3S-ENNv3NY9bNIZK9Ed-Q",
+        authDomain: "finalexam-16592.firebaseapp.com",
+        databaseURL: "https://finalexam-16592.firebaseio.com",
+        projectId: "finalexam-16592",
+        storageBucket: "finalexam-16592.appspot.com",
+        messagingSenderId: "302942441974",
+        appId: "1:302942441974:web:2d4c24f4a511a94a7af7d7",
+        measurementId: "G-KJW8LNR14H"
+    };
+    firebase.initializeApp(config);
+  </script>
+
+  <script>
+        $(document).ready(function(){  
+          var userLogin;
+          var uuid;
+          var signInclick;
+        firebase.auth().onAuthStateChanged(function(user) {
+          if (user) {
+            userLogin = user;
+            uuid = userLogin['uid'];
+            alert(uuid);
+          } else {
+            userLogin = null;
+          }
+        });  
+      });         
+    </script>
 </head>
 
 <body>
