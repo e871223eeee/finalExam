@@ -20,7 +20,40 @@
 
   <!-- Custom styles for this template -->
   <link href="css/clean-blog.min.css" rel="stylesheet">
-
+<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.7.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyA1pst5wov2RW3S-ENNv3NY9bNIZK9Ed-Q",
+        authDomain: "finalexam-16592.firebaseapp.com",
+        databaseURL: "https://finalexam-16592.firebaseio.com",
+        projectId: "finalexam-16592",
+        storageBucket: "finalexam-16592.appspot.com",
+        messagingSenderId: "302942441974",
+        appId: "1:302942441974:web:2d4c24f4a511a94a7af7d7",
+        measurementId: "G-KJW8LNR14H"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script>
+      function check(){
+        $(document).ready(function(){  
+          var userLogin;
+          var uuid;
+        firebase.auth().onAuthStateChanged(function(user) {
+          if (user) {
+            userLogin = user;
+            uuid = userLogin['uid'];
+            document.location.href="home.html";
+          } else {
+            userLogin = null;
+              document.location.href="index.html";
+          }
+        });  
+      });  
+      }       
+    </script>
 </head>
 
 <body>
@@ -36,16 +69,7 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">首頁</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">關於我</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="post.html">聊天室</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">登入與註冊</a>
+            <a class="nav-link" onclick="check()">首頁</a>
           </li>
         </ul>
       </div>

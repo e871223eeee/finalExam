@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Clean Blog - Start Bootstrap Theme</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="css/clean-blog.min.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.7.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyA1pst5wov2RW3S-ENNv3NY9bNIZK9Ed-Q",
+        authDomain: "finalexam-16592.firebaseapp.com",
+        databaseURL: "https://finalexam-16592.firebaseio.com",
+        projectId: "finalexam-16592",
+        storageBucket: "finalexam-16592.appspot.com",
+        messagingSenderId: "302942441974",
+        appId: "1:302942441974:web:2d4c24f4a511a94a7af7d7",
+        measurementId: "G-KJW8LNR14H"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script>
+      function check(){
+        $(document).ready(function(){  
+          var userLogin;
+          var uuid;
+        firebase.auth().onAuthStateChanged(function(user) {
+          if (user) {
+            userLogin = user;
+            uuid = userLogin['uid'];
+            document.location.href="home.html";
+          } else {
+            userLogin = null;
+              document.location.href="index.html";
+          }
+        });  
+      });  
+      }       
+    </script>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Start Bootstrap</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link"  onclick="check()">首頁</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('img/post-bg.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  
+透過十二星座這個活動，隊友們不僅能夠測試一下團隊的整體實力和默契外，每天還可以籍此獲得大量不受限經驗、金色星塵及裝備強化材料等。<br>
+<br>
+<u><span style="font-size: large;"><b>十二星座的位置</b></span></u><br>
+以下是十二星座分佈的大概位置，到附近找找便會可以找到：<br>
+<br>
+<b>神木鎮</b><br>
+<img border="0" data-original-height="240" data-original-width="320" src="https://2.bp.blogspot.com/-u0jTAlxrQnI/XFzsJ-cf1_I/AAAAAAAAC9I/IW6EMIiQPT419wslwZfqG6Zm8CssCgGUQCLcBGAs/s1600/map1aaa.jpg">
+<br>
+<br>
+<b>銀雪郡</b><br>
+<img border="0" data-original-height="240" data-original-width="320" src="https://2.bp.blogspot.com/-fRBGTY7OWAw/XFzsKaXsENI/AAAAAAAAC9M/-KJ_gahwnbsgcqBiu_fyhpHzRJ4HuQ5CACLcBGAs/s1600/map2aaa.jpg">
+<br>
+<br>
+<b>百花流域</b><br>
+<img border="0" data-original-height="240" data-original-width="320" src="https://3.bp.blogspot.com/-lQc-9VVvTg0/XFzsKsqfSbI/AAAAAAAAC9Q/3UKTpY5wLiQK-liqTBPNSLwg3rneHVp3ACLcBGAs/s1600/map3aaa.jpg">
+<br>
+<br>
+<b>日陽森林</b><br>
+<img border="0" data-original-height="240" data-original-width="320" src="https://2.bp.blogspot.com/-bs21YmSXBec/XFzsK2TmTcI/AAAAAAAAC9U/gWMtK6AKFjUBNY4GirqhnxTpXPgCuKkywCLcBGAs/s1600/map4aaa.jpg">
+<br>
+<br>
+
+<!-- Adsense: 廣告 336x280 (內文 1) -->
+<div align="center" style="width:340px; margin:0 auto; text-align:center;">
+<span align="center" id="Ads1" style="margin:0 auto; text-align:center;">
+<div align="center" style="width:340px; margin:0 auto; text-align:center;">
+<ins class="adsbygoogle" data-ad-client="ca-pub-2465524358597325" data-ad-slot="4946937407" style="display:inline-block;width:336px;height:280px" data-adsbygoogle-status="done"><ins id="aswift_7_expand" style="display:inline-table;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:336px;background-color:transparent;"><ins id="aswift_7_anchor" style="display:block;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:336px;background-color:transparent;"><iframe width="336" height="280" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_7" name="aswift_7" style="left:0;position:absolute;top:0;border:0px;width:336px;height:280px;"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</span>
+</div>
+<br>
+
+<u><span style="font-size: large;"><b>十二星座破關攻略</b></span></u><br>
+然而，不少玩家可能因為不熟練首領的攻擊方式，或者與隊友缺少溝通，而導致滅團。<br>
+以下是十二星座各個守衛的破關攻略，僅供參考：<br>
+<br>
+<u><b>１星：水瓶守衛</b></u><br>
+首領屬入門級，可直接暴力推，沒什麼難度，跟傭兵組隊也可以。<br>
+<br>
+<br>
+<u><b>２星：雙魚守衛</b></u><br>
+都是可以以暴力直接推倒，也沒什麼難度，組傭兵也是可以的。<br>
+<br>
+<br>
+<u><b>３星：白羊守衛</b></u><br>
+沒什麼要留意，也是可以直接以暴力推倒，沒什麼難度，組傭兵也可。<br>
+<br>
+<br>
+<u><b>４星：金牛守衛</b></u><br>
+開始需要人手操作，首領會在地上放綠圈，２秒以後圈內所有玩家都會被藤蔓困住，如果沒有其它玩家把藤蔓打掉，被困住的玩家就會掛掉。<br>
+這裡組傭兵也可以，只要玩家不被困住就可以，傭兵被困住了，玩家把藤蔓打掉就好了。<br>
+<br>
+<br>
+<u><b>５星：雙子守衛</b></u><br>
+首領本身沒什麼傷害，但是過一段時間會放藍圈，當時沒什麼用，但是過會就放黃圈，這個時候全屏的所有玩家都不能使用技能。<br>
+這時，就必須跑到藍圈，待幾秒便能恢復，可以繼續打。<br>
+這裡組傭兵也可以，不過傭兵不會跑藍圈，但可直接把首領引到藍圈那裡開打。<br>
+<br>
+<br>
+<u><b>６星：巨蟹守衛</b></u><br>
+玩家腳下會出現紅圈，３秒後會爆炸，而且傷害是重疊的，所以玩家必須跑散開，就能避免直接炸死，不過當時血量要求必須要有７萬以上。<br>
+可以選擇變身硬扛，或者有神官開無敵。<br>
+首領在半血時，會召喚冰球，打掉冰球並集合到中間柱子啟動開關，這時屏幕會彈出提示。如果沒有彈出提示，即是說明有隊友點過。<br>
+超過時間沒啟動開關，或者啟動後沒在中間集合的，都會掛掉。<br>
+另外有一個需要注意的點，首領進入第二階段後，傷害是可以秒殺玩家，這時必須通過變身來扛過這個階段。<br>
+<br>
+<br>
+<u><b>７星：獅子守衛</b></u><br>
+這裡需要一定的傷害，輸出不夠就一定過不了。<br>
+首領會釋放直線型技能， 這個很好躲。<br>
+其次，首領會定期在玩家所站的位置產生紅圈，經過２秒後，進入圈中會變身老人，這個時候什麼技能都不能放，只能瞎跑。<br>
+<br>
+<img border="0" data-original-height="240" data-original-width="320" src="https://2.bp.blogspot.com/-1lbQfNLTtt4/XFzsGWAc_gI/AAAAAAAAC8Y/adIZrb90resGa_oaiptiK6-yeJ1PyDh3ACLcBGAs/s1600/58aaa.jpg">
+<br>
+<br>
+但是在偶數（２，４，６，８……）輪放紅圈後，首領會說【沒有年輕人能抵擋我的誘惑】、或者【跳起舞吧 小寶貝】，屏幕上會顯示字幕的，這個時候玩家必須去找那個紅圈去踩，否則就會被定身原地跳舞，然後被秒掉。<br>
+踩了紅圈的人就變成老人，雖然不能用技能，但是不會被秒掉，幾秒後變回來便可以繼續打。<br>
+要留意的是，冰法的高級閃現以及刺客的隱身，都可以解除定身狀態。<br>
+另外，負責輸出的隊友應盡量分開站位，避免紅圈重疊，出現一個玩家同時踩了兩個圈導致隊友沒有圈踩的情況。<br>
+<br>
+首領在半血時，會召喚６個忌妒之心出來，三個在右上邊，三個在左下邊。<br>
+<br>
+<img border="0" data-original-height="240" data-original-width="320" src="https://3.bp.blogspot.com/-knxYEt8vP8w/XFzsFr21v5I/AAAAAAAAC8M/EyLQJwz4gp8OAB59gPdVFwBfbpuo7UBLQCLcBGAs/s1600/55aaa.jpg">
+<br>
+<br>
+首領這時候不會攻擊，玩家必須集中火力把心心全部打掉，如果不打掉，首領就會回血，而且增加傷害。<br>
+此外，若首領重新現身，並出現【莉薇妲吸收了忌妒之心的能量和血量，變得更強了】，２秒次後，會出一個高傷害的技能，神官要留好技能，或提前開無敵。<br>
+<br>
+<br>
+<u><b>８星：處女守衛</b></u><br>
+這裡的技巧要求相對簡單，但是要比較肉。 <br>
+要注意的是，玩家被首領點到紅箭頭後，一定要遠離隊友。<br>
+<br>
+<img border="0" data-original-height="240" data-original-width="320" src="https://2.bp.blogspot.com/-XYjOrPov-ks/XFzsFgGOm2I/AAAAAAAAC8U/aTsviGT6YYYR59FaWLwpwStBzXq9R8g7ACLcBGAs/s1600/57aaa.jpg">
+<br>
+<br>
+因為出現紅箭頭不久，該玩家的所在位置會出現紫球，其爆炸傷害非常高，容易坑死隊友。<br>
+出現紅箭頭的玩家可以選擇，應馬上遠離戰場，走到角落放下紫球再加入戰鬥。<br>
+若紫球放在首領的旁邊，首領的傷害也會大幅提高。<br>
+<br>
+首領在半血時，會召喚４把劍。<br>
+建議把那四把劍都打掉，因為過一會兒，他會以劍陣攻擊玩家。<br>
+<br>
+<img border="0" data-original-height="240" data-original-width="320" src="https://3.bp.blogspot.com/-PPT7sa37irE/XFzsFtkCfhI/AAAAAAAAC8Q/ilZFGcHJK1om59fZEUsa1FQ1fQrBlttxwCLcBGAs/s1600/56aaa.jpg">
+<br>
+<br>
+首領會對所有玩家造成大額的傷害並附帶暈眩效果，玩家也可以選擇走位躲一下技能，也可以選擇變身硬扛傷害。<br>
+<br>
+<br>
+<u><b>９星：天秤守衛</b></u><br>
+這裡注重技巧，而通關獎勵也較高。<br>
+首領被打一段時間後，會仰頭搖手。<br>
+這時候屏幕上會提示它防禦增加，此時不要打首領，改為在地圖上找自爆蜘蛛。<br>
+擊殺蜘蛛，利用炸爆破掉首領的盾，即可繼續打首領。<br>
+蜘蛛炸爆會提示倒計時間，玩家注意離開爆炸範圍。<br>
+<br>
+要注意的是，首領偶爾也會仰天搖手。<br>
+這時一定要躲開，因為下一秒它會放一個爆炸傷害的技能，大概１８萬左右，極有可能秒掉血量不夠的隊友。<br>
+這個技能很好躲，因為動作十分明顯。<br>
+<br>
+<br>
+<u><b>１０星：天蠍守衛</b></u><br>
+首領的腳下會出現紅圈，避開即可。<br>
+其次，首領周圍出現４個暗影之靈，需要在他們靠近首領前清掉。<br>
+可以選擇以下２種方法處理：<br>
+１. 運用控制技能把一個一個清掉。<br>
+２. 全隊繼續打首領，等４個暗影之靈靠近首領的瞬間，神官無敵擋掉傷害。<br>
+第２種方法可以節省不少的時間，因為首領的血量比較厚，所以常常會出現在限定時間內，未能打倒首領的情況。<br>
+<br>
+此外，當屏幕出現【所有人被施加了惡靈詛咒，死亡後會召喚出惡靈】，會隨機在一個玩家的腳下出現毒圈，這時建議遠程職業分散站，毒圈便不會影響到其它隊友。<br>
+<br>
+<br>
+<u><b>１１星：射手守衛</b></u><br>
+這裡的模式跟７星是一樣的。<br>
+首領會釋放直線型技能，切勿站在首領的正對面，不然很容易被秒殺。<br>
+其次，首領會定期在玩家所站的位置產生紅圈，經過２秒後，進入圈中會變身老人，這個時候無法釋放技能，只能瞎跑。<br>
+但是在偶數（２，４，６，８……）輪放紅圈後，首領會說【沒有年輕人能抵擋我的誘惑】、或者【跳起舞吧 小寶貝】，屏幕上會顯示字幕的，這個時候玩家必須去找那個紅圈去踩，否則就會被定身原地跳舞，然後被秒掉。<br>
+踩了紅圈的人就變成老人，雖然不能用技能，但是不會被秒掉，幾秒後變回來便可以繼續打。<br>
+要留意的是，冰法的高級閃現以及刺客的隱身，都可以解除定身狀態。<br>
+另外，負責輸出的隊友應盡量分開站位，避免紅圈重疊，出現一個玩家同時踩了兩個圈導致隊友沒有圈踩的情況。<br>
+<br>
+首領在半血時，會召喚６個忌妒之心出來，三個在右上邊，三個在左下邊。<br>
+首領這時候不會攻擊，玩家必須集中火力把心心全部打掉，如果不打掉，首領就會回血，而且增加傷害。<br>
+此外，若首領重新現身，並出現【莉薇妲吸收了忌妒之心的能量和血量，變得更強了】，２秒次後，會出一個高傷害的技能，神官要留好技能，或提前開無敵。<br>
+<br>
+<br>
+<u><b>１２星：摩羯守衛</b></u><br>
+這裡的模式跟８星是差不多的，要求相對簡單，但是要比較肉。 <br>
+首領會釋放直線型技能，揮舞三下巨劍，向前刺擊，只要不站在首領的正前方，傷害很容易避過。<br>
+<br>
+要注意的是，玩家被首領點到紅箭頭後，一定要遠離隊友。<br>
+因為出現紅箭頭不久，該玩家的所在位置會出現紫球，其爆炸傷害非常高，容易坑死隊友。<br>
+出現紅箭頭的玩家可以選擇，應馬上遠離戰場，走到角落放下紫球再加入戰鬥。<br>
+若紫球放在首領的旁邊，首領的傷害也會大幅提高。<br>
+<br>
+首領在半血時，會召喚４把劍。<br>
+建議把那四把劍都打掉，因為沒清掉的劍會使首領的攻擊力提高，過一會兒，他會以劍陣攻擊玩家。<br>
+首領會對所有玩家造成大額的傷害並附帶暈眩效果，玩家也可以選擇走位躲一下技能，也可以選擇變身硬扛傷害。<br>
+<br>
+當首領剩最後一點血的時候，會出現【結束的時間到了......準備好死亡了嗎？】，這時首領會進入蓄力狀態。<br>
+若在規定的時間內，沒有將首領的血量打完，首領就會秒殺所有人。<br>
+當然神官的無敵可以免疫秒殺，也可以用變身來硬扛。<br>
+
+<br>
+<b>資料來源</b>： <a href="https://gameguide.hongkongfootprint.com">遊戲攻略館 (GameGuide.HongKongFootprint.com)</a>，版權所有，切勿轉載，並保留所有權。<br>
+<br>
+<b>想知道更多不同遊戲的破關攻略及詳細介紹？</b><br>
+點擊查看 <span style="color: #0b5394;"><a href="https://gameguide.hongkongfootprint.com">遊戲攻略館 (GameGuide.HongKongFootprint.com)</a></span> 的首頁，便會看到各個遊戲的相關攻略及介紹。<br>
+當中包括有角色升級，裝備升級，材料或資源分佈位置，寵物資料，食譜資料，破關心得，職業分析等等的攻略內容，以便玩家查看～！<br>
+<br>
+<i>以上資料及圖片僅供參考。如有變動，以有關機構的公佈變化作準。</i><br>
+<br>
+<br>
+<br>
+<br>
+<div class="pbtsharethisbutt">
+分享: <a href="https://www.facebook.com/share.php?u=https://gameguide.hongkongfootprint.com/2018/12/laplace-twelve.html" onclick="window.open(this.href,&quot;sharer&quot;,&quot;toolbar=0,status=0,width=626,height=436&quot;); return false;" rel="nofollow" target="_blank" title="Share this on Facebook"><i class="fa fa-facebook"></i></a><a href="https://twitter.com/intent/tweet?text=風之國度 - 十二星座位置及破關全攻略&amp;url=https://gameguide.hongkongfootprint.com/2018/12/laplace-twelve.html" rel="nofollow" target="_blank" title="Tweet This!"><i class="fa fa-twitter"></i></a><a href="https://plus.google.com/share?url=https://gameguide.hongkongfootprint.com/2018/12/laplace-twelve.html" onclick="javascript:window.open(this.href,   &quot;&quot;, &quot;menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600&quot;);return false;" rel="nofollow" target="_blank" title="Share this on Google+"><i class="fa fa-google-plus"></i></a><a href="https://pinterest.com/pin/create/button/?url=https://gameguide.hongkongfootprint.com/2018/12/laplace-twelve.html&amp;media=https://3.bp.blogspot.com/-8hdM7v6dpqA/XFe-uIKxChI/AAAAAAAAA7Y/C7VqgcHyN7c5JiQgnPKnrPaUIz4D3M2BwCLcBGAs/s1600/54aaa.jpg&amp;description=風之國度 - 十二星座位置及破關全攻略" rel="nofollow" target="_blank" title="Share on Pinterest"><i class="fa fa-pinterest"></i></a><a href="https://www.linkedin.com/shareArticle?mini=true&amp;title=風之國度 - 十二星座位置及破關全攻略&amp;url=https://gameguide.hongkongfootprint.com/2018/12/laplace-twelve.html" rel="nofollow" target="_blank" title="Share this on Linkedin"><i class="fa fa-linkedin"></i></a>
+</div>
+<div style="clear: both;"></div>
+</div>
+
+  <hr>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <ul class="list-inline text-center">
+            <li class="list-inline-item">
+              <a href="#">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          </ul>
+          <p class="copyright text-muted">Copyright &copy; Your Website 2019</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/clean-blog.min.js"></script>
+
+</body>
+
+</html>

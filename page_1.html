@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Clean Blog - Start Bootstrap Theme</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="css/clean-blog.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.7.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyA1pst5wov2RW3S-ENNv3NY9bNIZK9Ed-Q",
+        authDomain: "finalexam-16592.firebaseapp.com",
+        databaseURL: "https://finalexam-16592.firebaseio.com",
+        projectId: "finalexam-16592",
+        storageBucket: "finalexam-16592.appspot.com",
+        messagingSenderId: "302942441974",
+        appId: "1:302942441974:web:2d4c24f4a511a94a7af7d7",
+        measurementId: "G-KJW8LNR14H"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script>
+      function check(){
+        $(document).ready(function(){  
+          var userLogin;
+          var uuid;
+        firebase.auth().onAuthStateChanged(function(user) {
+          if (user) {
+            userLogin = user;
+            uuid = userLogin['uid'];
+            document.location.href="home.html";
+          } else {
+            userLogin = null;
+              document.location.href="index.html";
+          }
+        });  
+      });  
+      }       
+    </script>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Start Bootstrap</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" onclick="check()">首頁</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('img/post-bg.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  </div><u><span style="font-size: large;"><b>守護精靈的品質</b></span></u><br>
+守護精靈的品質可分為Ｎ級，Ｒ級，ＳＲ級以及ＳＳＲ級。<br>
+即是藍色，紫色， 金色及紅色的。<br>
+把守護精靈放在星陣裡，會增加玩家一定的戰力和人物屬性。<br>
+守護精靈品質越高，屬性加成便越高。<br>
+<br>
+<img border="0" data-original-height="240" data-original-width="320" src="https://1.bp.blogspot.com/-3fA0WWZhlFA/XFz1sgqFsCI/AAAAAAAADAk/ENz_l87USb4VdlM8lpZvo0tYKVG84hHiQCLcBGAs/s1600/6aaa.jpg">
+<br>
+<br>
+<br>
+<br>
+<u><b><span style="font-size: large;">守護精靈的取得方法</span></b></u><br>
+守護精靈主要透過使用捕蛋網在守護島抓捕守護蛋取得。<br>
+打開背包，選捕蛋網，點擊【前往】，即可傳送至守護島。<br>
+<br>
+<img border="0" data-original-height="240" data-original-width="320" src="https://2.bp.blogspot.com/-xpXwYmpkOwo/XFz1sGDXSlI/AAAAAAAADAc/sPefAOkg6Kw_m070zrLLpNeESxO-N14UQCLcBGAs/s1600/4aaa.jpg">
+<br>
+<br>
+也可以打開世界地圖，點擊守護島直接飛過去。<br>
+玩家可以自己使用捕蛋網抓捕守護蛋，也可以透過消耗銀幣委託ＮＰＣ抓捕，但委託捕捉需要玩家等級２８級。<br>
+<br>
+<img border="0" data-original-height="240" data-original-width="320" src="https://4.bp.blogspot.com/-vqP18gRIlYs/XFz1sPfdBBI/AAAAAAAADAg/y1v-szG2cWUrurpg4cP0uz-KZeh85WfaQCLcBGAs/s1600/5aaa.jpg">
+<br>
+<br>
+當背包裡存有捕蛋網時，只需要靠近想要捕捉的守護蛋，便可以按【捕捉】來抓捕守護蛋。<br>
+每張捕蛋網可以捕捉３隻守護精靈，點擊可以查看每隻的詳細屬性，選擇１隻最喜歡的簽訂契約。<br>
+通過完成藏寶圖以及日常任務，玩家可以取得捕蛋網或者捕蛋網碎片。<br>
+而收集滿１０個捕蛋網碎片，便可以合成一個捕蛋網道具。<br>
+<br>
+除了使用捕蛋網抓捕守護精靈外，也可以通過一些簽到活動，完全任務，以及在市集購買守護精靈碎片合成取得。<br>
+有些守護精靈碎片是需要鑑定，而鑑定出來的守護精靈都是隨機的，所以入坑需要慎重。<br>
+<br>
+在簽訂契約後，日後如果守護精靈不合心水，也可以透過放生來換取夏日果汁。<br>
+<br>
+<img border="0" data-original-height="240" data-original-width="320" src="https://2.bp.blogspot.com/-hCFrR7ps1xo/XFz1rv6je2I/AAAAAAAADAY/Kv0Rs8xG1vk50eJJ9zsiEIEy-dA6P7b4ACLcBGAs/s1600/3aaa.jpg">
+<br>
+<br>
+<br>
+<br>
+<u><b><span style="font-size: large;">強化星級</span></b></u><br>
+守護精靈一共８個技能框，隨著星級增加會不斷解鎖。<br>
+要強化星級，首先便要提升守護精靈的親密度。<br>
+守護精靈的親密度可以透過餵食道具夏日果汁，或者攜帶守護精靈出戰來提升。<br>
+親密度爆滿時，守護精靈便可以通過消耗一定數量同星級的守護精靈來強化星級。<br>
+消耗數量隨星級增加，例如一星需要１隻一星守護精靈，二星則需要２隻二星守護精靈。<br>
+強化星級每提升１級便會隨機學習１個技能（技能等級可分為綠色，藍色及紫色技能）。<br>
+最多共可學習７個技能。<br>
+<br>
+<img border="0" data-original-height="240" data-original-width="320" src="https://1.bp.blogspot.com/-6aA3exsfJoo/XFz1tGK0l_I/AAAAAAAADAs/_TW-l7kpw6ARJpG-S0cyIyLpOcLK0k0EgCLcBGAs/s1600/8aaa.jpg">
+<br>
+<br>
+<br>
+<br>
+<u><span style="font-size: large;"><b>守護精靈的在星陣裡的屬性加成</b></span></u><br>
+守護精靈可以搭配星陣，一共是５個位置，分別於玩家等級３５級，４５級，５５級及６５級時各會解鎖１個。<br>
+把守護精靈放在星陣裡，會增加玩家一定的戰力和人物屬性。<br>
+<br>
+<img border="0" data-original-height="240" data-original-width="320" src="https://4.bp.blogspot.com/-7zl-9MFj9Ug/XFz1rEAIsUI/AAAAAAAADAU/UmmJlT8dmT8cujh_hae2Zxw-aNjVO4cnQCLcBGAs/s1600/2aaa.jpg">
+<br>
+<br>
+至於增加的百分比如下：<br>
+藍色(Ｎ級)５％，紫色(Ｒ級)６％，金色(ＳＲ級)７％，紅色(ＳＳＲ級)１０％。<br>
+比如說攻擊都是１０００的守護精靈，放在全屬性的位置上，藍色的就是加成５０點攻擊，紫色加成６０點攻擊。<br>
+<br>
+<br>
+
+<!-- Adsense: 廣告 336x280 (內文 1) -->
+<div align="center" style="width:340px; margin:0 auto; text-align:center;">
+<span align="center" id="Ads1" style="margin:0 auto; text-align:center;">
+<div align="center" style="width:340px; margin:0 auto; text-align:center;">
+<ins class="adsbygoogle" data-ad-client="ca-pub-2465524358597325" data-ad-slot="4946937407" style="display:inline-block;width:336px;height:280px" data-adsbygoogle-status="done"><ins id="aswift_7_expand" style="display:inline-table;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:336px;background-color:transparent;"><ins id="aswift_7_anchor" style="display:block;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:336px;background-color:transparent;"><iframe width="336" height="280" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_7" name="aswift_7" style="left:0;position:absolute;top:0;border:0px;width:336px;height:280px;"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</span>
+</div>
+<br>
+
+<u><span style="font-size: large;"><b>守護精靈的技能</b></span></u><br>
+每個守護精靈都擁有一個自身特有的主動技能，一個隨機的性格和一個天生的被動技能。<br>
+<br>
+守護精靈的初始技能及性格，是可以通過使用忘憂果來重新洗練。<br>
+而忘憂果主要是通過完成藏寶圖，或是在市集購買獲得。<br>
+<br>
+<img border="0" data-original-height="240" data-original-width="320" src="https://2.bp.blogspot.com/-KR4I_VZt62c/XFz1s4ZY3AI/AAAAAAAADAo/--s8FHzAIU4WCK71UHifdj3JmZGfTKyuQCLcBGAs/s1600/7aaa.jpg">
+<br>
+<br>
+<br>
+玩家可以對金色或以上的守護精靈技能進行提取，變為技能書，讓其他守護精靈學習。<br>
+意思即是放生金色或以上的守護精靈，便會獲得天生的技能書。<br>
+每個守護精靈只能提取一個技能，提取技能後，放生後守護精靈便會消失。<br>
+此外，守護精靈的技能，也可以在市集購買獲得。<br>
+<br>
+<br>
+<u><b><span style="font-size: large;">守護精靈的技能搭配</span></b></u><br>
+守護精靈最多共可學習７個技能。<br>
+以下是不同類型的技能選擇，可因應不同類型的守護精靈的需要來學習。<br>
+<br>
+<b>出戰型技能</b><br>
+１：致命５　＋３２４攻擊　＋２０％暴擊<br>
+２：硬皮５　＋３２４防禦　＋４０％格擋<br>
+３：吸血５　＋９７２０生命　＋２０％吸血<br>
+４：暴怒５　＋３２４攻擊　＋４０％暴傷<br>
+５：幻之力　＋１５％攻擊　＋１０％傷害<br>
+６：貓之力　＋１２％攻擊　＋５％傷害<br>
+７：汲取５　＋２７０攻擊　＋２７０防禦　＋８１００生命　＋４００吸血<br>
+<br>
+出戰型守護精靈的性格：<br>
+最好選擇加攻擊的，或者加生命百分比的。<br>
+<br>
+<br>
+<b>防禦型技能</b><br>
+１：堅固５　＋３６０防禦<br>
+２：硬皮５　＋３２４防禦　＋４０％格擋<br>
+３：堅韌５　＋３４２防禦<br>
+４：火之力　＋３００防禦<br>
+５：晶之力　＋１２％防禦<br>
+６：雪之力　＋２７０防禦<br>
+７：活力５　＋２８８防禦　＋２８８攻擊　＋８６４０生命<br>
+<br>
+防禦型守護精靈的性格：<br>
+最好選擇加防禦的，或者加生命百分比的，不要減防禦的。<br>
+<br>
+<br>
+<b>全攻型技能</b><br>
+１：鋒利５　＋３６０攻擊<br>
+２：致命５　＋３２４攻擊　＋２０％暴擊<br>
+３：暴怒５　＋３２４攻擊　＋４０％暴傷<br>
+４：貓之力　＋１２％攻擊　＋５％傷害<br>
+５：幻之力　＋１５％攻擊　＋１０％傷害<br>
+６：胖之力　＋２７０攻擊<br>
+７：活力５　＋２８８攻擊　＋２８８防禦　＋８６４０生命<br>
+<br>
+全攻型守護精靈的性格：<br>
+最好選擇加攻擊的。<br>
+<br>
+<br>
+<b>生命型技能</b><br>
+１：強壯５　＋１０８００生命<br>
+２：吸血５　＋９７２０生命　＋２０％吸血<br>
+３：復蘇５　＋１０２６０生命<br>
+４：楓之力　＋１５％生命<br>
+５：狼之力　＋１２％生命<br>
+６：花之力　＋８１００生命<br>
+７：活力５　＋２８８攻擊　＋２８８防禦　＋８６４０生命<br>
+<br>
+生命型守護精靈的性格：<br>
+最好選擇加生命百分比的。<br>
+<br>
+比如說，生命型的守護精靈，肯定先學強壯５，再學吸血５，之後復蘇５。<br>
+
+<br>
+<b>資料來源</b>： <a href="https://gameguide.hongkongfootprint.com">遊戲攻略館 (GameGuide.HongKongFootprint.com)</a>，版權所有，切勿轉載，並保留所有權。<br>
+<br>
+<b>想知道更多不同遊戲的破關攻略及詳細介紹？</b><br>
+點擊查看 <span style="color: #0b5394;"><a href="https://gameguide.hongkongfootprint.com">遊戲攻略館 (GameGuide.HongKongFootprint.com)</a></span> 的首頁，便會看到各個遊戲的相關攻略及介紹。<br>
+當中包括有角色升級，裝備升級，材料或資源分佈位置，寵物資料，食譜資料，破關心得，職業分析等等的攻略內容，以便玩家查看～！<br>
+<br>
+<i>以上資料及圖片僅供參考。如有變動，以有關機構的公佈變化作準。</i><br>
+<br>
+<br>
+<br>
+<br>
+<div class="pbtsharethisbutt">
+分享: <a href="https://www.facebook.com/share.php?u=https://gameguide.hongkongfootprint.com/2018/12/laplace-guardian.html" onclick="window.open(this.href,&quot;sharer&quot;,&quot;toolbar=0,status=0,width=626,height=436&quot;); return false;" rel="nofollow" target="_blank" title="Share this on Facebook"><i class="fa fa-facebook"></i></a><a href="https://twitter.com/intent/tweet?text=風之國度 - 守護精靈養成及技能搭配攻略&amp;url=https://gameguide.hongkongfootprint.com/2018/12/laplace-guardian.html" rel="nofollow" target="_blank" title="Tweet This!"><i class="fa fa-twitter"></i></a><a href="https://plus.google.com/share?url=https://gameguide.hongkongfootprint.com/2018/12/laplace-guardian.html" onclick="javascript:window.open(this.href,   &quot;&quot;, &quot;menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600&quot;);return false;" rel="nofollow" target="_blank" title="Share this on Google+"><i class="fa fa-google-plus"></i></a><a href="https://pinterest.com/pin/create/button/?url=https://gameguide.hongkongfootprint.com/2018/12/laplace-guardian.html&amp;media=https://4.bp.blogspot.com/-iiz6Fmk61GY/XFe-sHP2aAI/AAAAAAAAA64/d70VYa9EBKAWKmhGNGkgl0Kvc9OPys3pwCLcBGAs/s1600/1aaa.jpg&amp;description=風之國度 - 守護精靈養成及技能搭配攻略" rel="nofollow" target="_blank" title="Share on Pinterest"><i class="fa fa-pinterest"></i></a><a href="https://www.linkedin.com/shareArticle?mini=true&amp;title=風之國度 - 守護精靈養成及技能搭配攻略&amp;url=https://gameguide.hongkongfootprint.com/2018/12/laplace-guardian.html" rel="nofollow" target="_blank" title="Share this on Linkedin"><i class="fa fa-linkedin"></i></a>
+</div>
+<div style="clear: both;"></div>
+
+  <hr>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <ul class="list-inline text-center">
+            <li class="list-inline-item">
+              <a href="#">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          </ul>
+          <p class="copyright text-muted">Copyright &copy; Your Website 2019</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/clean-blog.min.js"></script>
+
+</body>
+
+</html>

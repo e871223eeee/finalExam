@@ -38,9 +38,7 @@
     firebase.initializeApp(config);
   </script>
   <script>
-    firebase.auth().signOut();
-  </script>
-  <script>
+    var isSignIn = 0;
         $(document).ready(function(){  
           var userLogin;
           var uuid;
@@ -51,9 +49,17 @@
             uuid = userLogin['uid'];
           } else {
             userLogin = null;
+            if (isSignIn == 1){
+              document.location.href="index.html";
+            }  
           }
         });  
-      });         
+      });  
+
+      function signOut(){
+        firebase.auth().signOut();
+        isSignIn = 1;
+      }       
     </script>
 </head>
 
@@ -79,7 +85,7 @@
             <a class="nav-link" href="contact.html">聊天室</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="signUpView.html">登入與註冊</a>
+            <a class="nav-link" onclick="signOut()">登出</a>
           </li>
         </ul>
       </div>

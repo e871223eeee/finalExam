@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Clean Blog - Start Bootstrap Theme</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="css/clean-blog.min.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.7.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyA1pst5wov2RW3S-ENNv3NY9bNIZK9Ed-Q",
+        authDomain: "finalexam-16592.firebaseapp.com",
+        databaseURL: "https://finalexam-16592.firebaseio.com",
+        projectId: "finalexam-16592",
+        storageBucket: "finalexam-16592.appspot.com",
+        messagingSenderId: "302942441974",
+        appId: "1:302942441974:web:2d4c24f4a511a94a7af7d7",
+        measurementId: "G-KJW8LNR14H"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script>
+      function check(){
+        $(document).ready(function(){  
+          var userLogin;
+          var uuid;
+        firebase.auth().onAuthStateChanged(function(user) {
+          if (user) {
+            userLogin = user;
+            uuid = userLogin['uid'];
+            document.location.href="home.html";
+          } else {
+            userLogin = null;
+              document.location.href="index.html";
+          }
+        });  
+      });  
+      }       
+    </script>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Start Bootstrap</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" onclick="check()">首頁</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('img/post-bg.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  
+
+玩家的家園等級提升至１５級後，便可以開啟料理系統。<br>
+料理系統可讓玩家製作不同的料理，再透過食用料理來獲得限時的增益效果。<br>
+料理製作十分簡單，只需走到家園內的料理台上，放入指定的食材，便有機會成功製作料理。<br>
+但某些料理必須持有相關食譜才可以製作，沒有食譜就算是食材正確，也是不能成功的。<br>
+<br>
+<img border="0" data-original-height="240" data-original-width="320" src="https://3.bp.blogspot.com/-77kmHGRpN1A/XFzsGq1ondI/AAAAAAAAC8c/4qyOpuaNuR44lNud1ybuuMRDXLab-oUPQCLcBGAs/s1600/60aaa.jpg">
+<br>
+<br>
+<u><span style="font-size: large;"><b>料理食譜</b></span></u><br>
+<br>
+<b><u>泡麵料理</u></b><br>
+<b>便宜泡麵</b>：錯誤的１級食材配方<br>
+攻防 +70、生命 +2100（無）評分 +1680<br>
+<br>
+<b>普通泡麵</b>：錯誤的５級食材配方<br>
+攻防 +100、生命 +3000（無）評分 +2400<br>
+<br>
+<b>可口泡麵</b>：錯誤的１０級食材配方<br>
+攻防 +150、生命 +4500（無）評分 +3120<br>
+<br>
+<b>美味泡麵</b>：錯誤的１５級食材配方<br>
+攻防 +200、生命 +6000（無）評分 +3840<br>
+<br>
+泡麵是根據食材等級而決定的，如要做普通泡麵，只要食材配方當中用了１個５級食材，其他全空就有可能做出普通泡麵。只用１個１０級食材其他全空，也能做出可口泡麵。<br>
+<br>
+<b><u>１級料理</u></b><br>
+<b>雞蛋麵</b>：小麥 + 小麥 + 雞蛋<br>
+攻防 +110、生命 +3300（生命恢復 +3000）評分 +2400<br>
+<br>
+<b>土豆泥</b>：土豆 + 土豆 + 土豆<br>
+攻防 +120、生命 +3600（最終傷害 +1500）評分 +2520<br>
+<br>
+<b>金粟冷湯</b>：玉米 + 玉米 + 小麥<br>
+攻防 +130、生命 +3900（反震 +1500）評分 +2640<br>
+<br>
+<b>魚肉丸子</b>：草魚 + 小麥 + 雞蛋<br>
+攻防 +140、生命 +4200（體力 +1.0%）評分 +2760<br>
+<br>
+<b>百花魚排</b>：草魚 + 玉米 + 土豆 （需要食譜，積分兌換）<br>
+攻防 +150、生命 +4500（傷害強度 +1.0%）評分 +2880<br>
+<br>
+<br>
+<b><u>５級料理</u></b><br>
+<b>煎恩利蛋</b>：雞蛋 + 雞蛋 + 芝士 + 黃油 <br>
+攻防 +160、生命 +4800（生命偷取 +2000）評分 +3000<br>
+<br>
+<b>笨豬三明治</b>：豬肉 + 芝士 + 小麥 + 雞蛋 <br>
+攻防 +170、生命 +5100（治療效果 +5.0%，體力 +2.0%）評分 +3120<br>
+<br>
+<b>田園鱈魚披薩</b>：鱈魚 + 胡蘿蔔 + 小麥 + 玉米 <br>
+攻防 +180、生命 +5400（格擋率 +1.0%）評分 +3240<br>
+<br>
+<b>脆薯豬柳堡</b>：豬肉 + 豬肉 + 小麥 + 土豆 <br>
+攻防 +190、生命 +5700（暴擊傷害 +2.0%）評分 +3360<br>
+<br>
+<b>勇敢者濃湯</b>：河豚 + 黃油 + 胡蘿蔔 + 玉米 （需要食譜，積分兌換）<br>
+攻防 +200、生命 +6000（對首領傷害 +2.0%）評分 +3480<br>
+<br>
+<br>
+<b><u>１０級料理（１５０張好人卡）</u></b><br>
+<b>香烤雞肉芝士卷</b>：雞肉 + 雞肉 + 胡蘿蔔 + 芝士 + 黃油 <br>
+攻防 +220、生命 +6600（抗暴率 +1.0%~2.0%）評分 +3720<br>
+<br>
+<b>意式肉醬面</b>：番茄 + 豬肉 + 胡蘿蔔 + 小麥 + 小麥 <br>
+攻防 +240、生命 +7200（命中率 +1.0%，傷害強度 +0.0%~1.0%）評分 +3960<br>
+<br>
+<b>阿拉斯加鱈魚排</b>：鱈魚 + 鱈魚 + 小麥 + 雞蛋 + 黑胡椒 <br>
+攻防 +260、生命 +7800（忽視防禦 +2.0%~4.0%）評分 +4200<br>
+<br>
+<b>老北京雞肉捲</b>：雞肉 + 雞蛋 + 胡蘿蔔 + 小麥 + 番茄 <br>
+攻防 +280、生命 +8400（治療效果 +5.0%，暴傷減免 +2.0%，抗暴率 +0.0%~2.0%）評分 +4440<br>
+<br>
+<b>迷魂豬排</b>：豬肉 + 豬肉 + 黃油 + 黑胡椒 + 番茄 （需要食譜，積分兌換）<br>
+攻防 +300、生命 +9000（強化負面狀態 +2.0%~5.0%，傷害強度 +0.0%~1.0%）評分 +4680<br>
+<br>
+<br>
+<b><u>１５級料理（６００張好人卡）</u></b><br>
+<b>咖哩土豆牛肉</b>：牛肉 + 牛肉 + 土豆 + 土豆 + 胡蘿蔔 <br>
+攻防 +320、生命 +9600（治療效果 +5.0%，傷害強度 +1.0%，生命 +1.0%）評分 +4920<br>
+<br>
+<b>芝士焗番茄</b>：洋蔥 + 雞肉 + 玉米 + 芝士 + 番茄 <br>
+攻防 +340、生命 +10200（吸血率 +1.0%）評分 +5160<br>
+<br>
+<b>魷味橡皮圈</b>：魷魚 + 魷魚 + 小麥 + 雞蛋 + 黃油 <br>
+攻防 +360、生命 +10800（斬殺傷害 +2.0%~4.0%）評分 +5400<br>
+<br>
+<b>黑椒小牛排</b>：牛肉 + 黃油 + 黑胡椒 + 番茄 + 洋蔥 <br>
+攻防 +380、生命 +11400（異常目標增傷 +2.0%~4.0%）評分 +5640<br>
+<br>
+<b>七色魷魚捲</b>：魷魚 + 番茄 + 黑胡椒 + 洋蔥 + 胡蘿蔔 <br>
+攻防 +400、生命 +12000（忽視防禦 +2.0%，異常目標增傷 +1.0%）評分 +5880<br>
+<br>
+<b>西班牙海鮮面</b>：魷魚 + 洋蔥 + 小麥 + 番茄 + 鱈魚（需要食譜，積分兌換）<br>
+攻防 +400、生命 +12000（暴擊傷害 +4.0%，暴擊率 +0.0%~2.0%）評分 +5880<br>
+<br>
+<b>青桿牛肉</b>：牛肉 + 牛肉 + 黑胡椒 + 玉米 + 黃油（需要食譜，積分兌換，廚神口袋）<br>
+攻防 +400、生命 +12000（全職業傷害 +2.0% ，生命 +0.0%~1.0%）評分 +5880<br>
+<br>
+<b>臘八艇仔粥</b>：魷魚 + 雞肉 + 小麥 + 草魚 + 雞蛋（需要食譜，臘八節活動）<br>
+攻防 +400、生命 +12000（對首領傷害 +3.0%~5.0% ，首領傷害減免 +3.0%~5.0%）評分 +5880<br>
+<br>
+<b>真嗣牛丼</b>：待補（需要食譜，積分兌換，廚神口袋）<br>
+攻防 +400、生命 +12000（吸血率 +1.0%~2.0% ，傷害強度 +1.0%~2.0%）評分 +5880<br>
+<br>
+<br>
+<b><u>２０級料理（１５００張好人卡）</u></b><br>
+<b>純情鮮蔬沙拉</b>：生菜 + 玉米 + 胡蘿蔔 + 番茄 + 洋蔥<br>
+攻防 +420、生命 +12600（格擋率 +2.0%，生命 +0.0%~2.0%，格擋減傷 +0.0%~2.0%）評分 +6120<br>
+<br>
+<b>雞肉沙拉潛艇堡</b>：雞肉 + 雞蛋 + 小麥 + 番茄 + 生菜<br>
+攻防 +440、生命 +13200（生命 +2.0%，傷害強度 +0.0%~2.0%，抗暴率 +0.0%~2.0%）評分 +6360<br>
+<br>
+<b>香煎口蘑牛里脊</b>：蘑菇 + 牛肉 + 洋蔥 + 黑胡椒 + 黃油<br>
+攻防 +460、生命 +13800（對戰士傷害 +2.0%~3.0%，對牧師傷害 +0.0%~3.0%，全職業傷害 +0.0%~3.0%）評分 +6600<br>
+<br>
+<b>海鮮蘑菇派</b>：蘑菇 + 魷魚 + 鱈魚 + 小麥 + 芝士<br>
+攻防 +480、生命 +14400（治療效果 +3.0%~8.0%，移動速度 +2.0%~8.0%）評分 +6840<br>
+<br>
+<b>芝士焗龍蝦</b>：龍蝦 + 龍蝦 + 芝士 + 黃油 + 黑胡椒（需要食譜，積分兌換）<br>
+攻防 +500、生命 +15000（攻擊 +1.0%~2.0%，暴擊率 +1.0%~2.0%，忽視防禦 +0.0%~5.0%）評分 +7080<br>
+<br>
+<b>海陸空胡炖</b>：豬肉 + 玉米 + 胡蘿蔔 + 龍蝦 + 雞肉（需要食譜，積分兌換，廚神口袋）<br>
+攻防 +500、生命 +15000（物傷減免 +1.0%~2.0%，生命 +1.0%~3.0%，法傷減免 +0.0%~2.0%）評分 +7080<br>
+<br>
+<br>
+<b><u>２５級料理（４０００張好人卡）</u></b><br>
+待補<br>
+<br>
+<br>
+
+<!-- Adsense: 廣告 336x280 (內文 1) -->
+<div align="center" style="width:340px; margin:0 auto; text-align:center;">
+<span align="center" id="Ads1" style="margin:0 auto; text-align:center;">
+<div align="center" style="width:340px; margin:0 auto; text-align:center;">
+<ins class="adsbygoogle" data-ad-client="ca-pub-2465524358597325" data-ad-slot="4946937407" style="display:inline-block;width:336px;height:280px" data-adsbygoogle-status="done"><ins id="aswift_7_expand" style="display:inline-table;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:336px;background-color:transparent;"><ins id="aswift_7_anchor" style="display:block;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:336px;background-color:transparent;"><iframe width="336" height="280" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_7" name="aswift_7" style="left:0;position:absolute;top:0;border:0px;width:336px;height:280px;"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</span>
+</div>
+<br>
+
+<u><span style="font-size: large;"><b>食材的取得途徑</b></span></u><br>
+<b>番茄、洋蔥、生菜、彩椒</b>：家園種植可獲得。<br>
+<b>魷魚、龍蝦、三文魚</b>：釣魚概率獲得，烹飪商店積分兌換。<br>
+<b>雞肉</b>：需要玩家烹飪等級達到１０級，收雞蛋概率獲得，烹飪商店積分兌換。<br>
+<b>牛肉</b>：需要玩家烹飪等級達到１５級，收牛奶概率獲得，烹飪商店積分兌換。<br>
+<b>蘑菇</b>：需要玩家烹飪等級達到２０級，伐木概率獲得，烹飪商店積分兌換。<br>
+<b>黑胡椒</b>：打狸貓掉落，烹飪商店積分兌換。<br>
+<br>
+<br>
+<u><span style="font-size: large;"><b>烹飪商店</b></span></u><br>
+在家園中的烹飪大師，將來會新增烹飪商店，可使用烹飪積分來兌換食譜及食材。<br>
+至於所售賣的廚神口袋，則像福袋，有機會抽到一些特別的食譜。<br>
+<br>
+<br>
+<u><span style="font-size: large;"><b>好人卡</b></span></u><br>
+要提升烹飪等級，就必須消耗好人卡。等級越高，所需要的好人卡數量便要越多。<br>
+以下列出每天可獲取好人卡的數量統計：<br>
+<b>助戰</b><br>
+１）裝備副本有５次，每次３張一共有１５張好人卡。<br>
+２）魂卡副本有５次，每次３張一共有１５張好人卡。<br>
+３）龍之祕寶有３次，每次３張一共有９張好人卡。<br>
+４）十二星座有５次，每次３張一共有１５張好人卡。<br>
+５）護送前５次，可以獲得１５王國聲望，後１５次每次１張好人卡，一共有１５張好人卡。<br>
+<br>
+<b>每天好人卡總結</b><br>
+15 + 15 + 9 + 15 + 15 = ６９ 張，所以玩家每天最多可以獲得６９張好人卡。<br>
+<br>
+<br>
+<u><span style="font-size: large;"><b>烹飪活力</b></span></u><br>
+每次烹調料理，都必須消耗烹飪活力。每位玩家每天可獲取的烹飪活力上限１２０，最多可以儲存３００個烹飪活力。<br>
+<br>
+<img border="0" data-original-height="240" data-original-width="320" src="https://3.bp.blogspot.com/-Hez3K4hq5H4/XFzsGyiZKaI/AAAAAAAAC8g/i8Ug4hZPGNcNJsKFMzawgS361P5mMRejwCLcBGAs/s1600/61aaa.jpg">
+<br>
+<br>
+以下列出烹飪活力的獲取途徑：<br>
+１）魂卡祕景３次，有１５點活力。<br>
+２）護送５次，可以獲得２５點活力。<br>
+３）狸貓５次，可以獲得２５點活力。<br>
+４）十二星座５次，也能獲得２５點活力。<br>
+５）捉蟲總動員８次，可以獲得４０點活力。<br>
+
+<br>
+<b>資料來源</b>： <a href="https://gameguide.hongkongfootprint.com">遊戲攻略館 (GameGuide.HongKongFootprint.com)</a>，版權所有，切勿轉載，並保留所有權。<br>
+<br>
+<b>想知道更多不同遊戲的破關攻略及詳細介紹？</b><br>
+點擊查看 <span style="color: #0b5394;"><a href="https://gameguide.hongkongfootprint.com">遊戲攻略館 (GameGuide.HongKongFootprint.com)</a></span> 的首頁，便會看到各個遊戲的相關攻略及介紹。<br>
+當中包括有角色升級，裝備升級，材料或資源分佈位置，寵物資料，食譜資料，破關心得，職業分析等等的攻略內容，以便玩家查看～！<br>
+<br>
+<i>以上資料及圖片僅供參考。如有變動，以有關機構的公佈變化作準。</i><br>
+<br>
+<br>
+<br>
+<br>
+<div class="pbtsharethisbutt">
+分享: <a href="https://www.facebook.com/share.php?u=https://gameguide.hongkongfootprint.com/2019/01/laplace-cuisine.html" onclick="window.open(this.href,&quot;sharer&quot;,&quot;toolbar=0,status=0,width=626,height=436&quot;); return false;" rel="nofollow" target="_blank" title="Share this on Facebook"><i class="fa fa-facebook"></i></a><a href="https://twitter.com/intent/tweet?text=風之國度 - 料理食譜配方全攻略&amp;url=https://gameguide.hongkongfootprint.com/2019/01/laplace-cuisine.html" rel="nofollow" target="_blank" title="Tweet This!"><i class="fa fa-twitter"></i></a><a href="https://plus.google.com/share?url=https://gameguide.hongkongfootprint.com/2019/01/laplace-cuisine.html" onclick="javascript:window.open(this.href,   &quot;&quot;, &quot;menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600&quot;);return false;" rel="nofollow" target="_blank" title="Share this on Google+"><i class="fa fa-google-plus"></i></a><a href="https://pinterest.com/pin/create/button/?url=https://gameguide.hongkongfootprint.com/2019/01/laplace-cuisine.html&amp;media=https://1.bp.blogspot.com/-Xf8ggRJ-Fis/XFe-u22n7zI/AAAAAAAAA7c/Ys-XHLPJYTMiuI3sNrC8lNy3_xk8mABwQCLcBGAs/s1600/59aaa.jpg&amp;description=風之國度 - 料理食譜配方全攻略" rel="nofollow" target="_blank" title="Share on Pinterest"><i class="fa fa-pinterest"></i></a><a href="https://www.linkedin.com/shareArticle?mini=true&amp;title=風之國度 - 料理食譜配方全攻略&amp;url=https://gameguide.hongkongfootprint.com/2019/01/laplace-cuisine.html" rel="nofollow" target="_blank" title="Share this on Linkedin"><i class="fa fa-linkedin"></i></a>
+</div>
+<div style="clear: both;"></div>
+</div>
+
+  <hr>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <ul class="list-inline text-center">
+            <li class="list-inline-item">
+              <a href="#">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          </ul>
+          <p class="copyright text-muted">Copyright &copy; Your Website 2019</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/clean-blog.min.js"></script>
+
+</body>
+
+</html>
