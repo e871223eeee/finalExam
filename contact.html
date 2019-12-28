@@ -20,7 +20,88 @@
 
   <!-- Custom styles for this template -->
   <link href="css/clean-blog.min.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.7.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyA1pst5wov2RW3S-ENNv3NY9bNIZK9Ed-Q",
+        authDomain: "finalexam-16592.firebaseapp.com",
+        databaseURL: "https://finalexam-16592.firebaseio.com",
+        projectId: "finalexam-16592",
+        storageBucket: "finalexam-16592.appspot.com",
+        messagingSenderId: "302942441974",
+        appId: "1:302942441974:web:2d4c24f4a511a94a7af7d7",
+        measurementId: "G-KJW8LNR14H"
+    };
+    firebase.initializeApp(config);
+    var db = firebase.database(); 
+  </script>
 
+    <script>
+       var uuid;
+      $(document).ready(function(){  
+          var userLogin;
+          var signInclick;
+        firebase.auth().onAuthStateChanged(function(user) {
+          if (user) {
+            userLogin = user;
+            uuid = userLogin['uid'];
+          } else {
+            userLogin = null;
+          }
+        });
+
+        $("#update_test").click(function(){
+          alert(uuid);
+                var username    = $('#update_username').val();
+                var title       = $('#update_title').val();
+                var body        = $('#update_body').val();
+                writeNewPost(uuid, username, title, body);
+            }); 
+            $("#query_test").click(function(){
+                query();
+            });              
+      });  
+
+        function writeNewPost(uid, username, title, body) {
+          // A post entry.
+          var postData = {
+            author: username,
+            uid: uid,
+            body: body,
+            title: title,
+            starCount: 0
+          };
+          // Get a key for a new Post.
+          var newPostKey = db.ref().child('posts').push().key;
+          // Write the new post's data simultaneously in the posts list and the user's post list.
+          var updates = {};
+          updates['/posts/' + newPostKey] = postData;
+          //updates['/user-posts/' + uid + '/' + newPostKey] = postData;
+          return db.ref().update(updates);
+        }   
+        function display_posts(data_val){
+          keys = Object.keys(data_val);
+          posts = '';
+              
+          for (var i = keys.length - 1; i >= 0; i--) {
+              posts += 'UserID: '+data_val[keys[i]]['uid']+'<br>';
+              posts += 'Author: '+data_val[keys[i]]['author']+'<br>';
+              posts += 'Title: '+data_val[keys[i]]['title']+'<br>';
+              posts += 'Body: '+data_val[keys[i]]['body']+'<br>';
+              posts += 'Star: '+data_val[keys[i]]['starCount']+'<br>';
+              posts += '----------------------<br>';
+              posts += '----------------------<br>';
+          }
+          $('#data').html(posts); 
+        } 
+        function query() {
+          db.ref('posts/').once('value', function(snapshot) {
+              display_posts(snapshot.val());
+            });   
+        }                
+    </script>
 </head>
 
 <body>
@@ -28,7 +109,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Start Bootstrap</a>
+      <a class="navbar-brand" href="index.html">聊天室</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         Menu
         <i class="fas fa-bars"></i>
@@ -36,16 +117,7 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="post.html">Sample Post</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
+            <a class="nav-link" href="home.html">首頁</a>
           </li>
         </ul>
       </div>
@@ -59,8 +131,6 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="page-heading">
-            <h1>Contact Me</h1>
-            <span class="subheading">Have questions? I have answers.</span>
           </div>
         </div>
       </div>
@@ -69,50 +139,13 @@
 
   <!-- Main Content -->
   <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
-        <p>Want to get in touch? Fill out the form below to send me a message and I will get back to you as soon as possible!</p>
-        <!-- Contact Form - Enter your email address on line 19 of the mail/contact_me.php file to make this form work. -->
-        <!-- WARNING: Some web hosts do not allow emails to be sent through forms to common mail hosts like Gmail or Yahoo. It's recommended that you use a private domain email address! -->
-        <!-- To use the contact form, your site must be on a live web host with PHP! The form will not work locally! -->
-        <form name="sentMessage" id="contactForm" novalidate>
-          <div class="control-group">
-            <div class="form-group floating-label-form-group controls">
-              <label>Name</label>
-              <input type="text" class="form-control" placeholder="Name" id="name" required data-validation-required-message="Please enter your name.">
-              <p class="help-block text-danger"></p>
-            </div>
-          </div>
-          <div class="control-group">
-            <div class="form-group floating-label-form-group controls">
-              <label>Email Address</label>
-              <input type="email" class="form-control" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address.">
-              <p class="help-block text-danger"></p>
-            </div>
-          </div>
-          <div class="control-group">
-            <div class="form-group col-xs-12 floating-label-form-group controls">
-              <label>Phone Number</label>
-              <input type="tel" class="form-control" placeholder="Phone Number" id="phone" required data-validation-required-message="Please enter your phone number.">
-              <p class="help-block text-danger"></p>
-            </div>
-          </div>
-          <div class="control-group">
-            <div class="form-group floating-label-form-group controls">
-              <label>Message</label>
-              <textarea rows="5" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Please enter a message."></textarea>
-              <p class="help-block text-danger"></p>
-            </div>
-          </div>
-          <br>
-          <div id="success"></div>
-          <div class="form-group">
-            <button type="submit" class="btn btn-primary" id="sendMessageButton">Send</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
+    <input type="text" id="update_username"   placeholder="名稱"/>
+    <input type="text" id="update_title"      placeholder="標題"/>
+    <input type="text" id="update_body"       placeholder="內文"/>  
+    <button id="update_test">發文</button><br><br>  
+
+    <label>-----[所有的貼文]-----</label><button id="query_test">查詢發文</button><br>
+    <label  id="data"></label><br>
 
   <hr>
 
