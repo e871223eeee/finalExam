@@ -8,48 +8,43 @@
 	<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
 	<link rel="stylesheet" href="signView.css">
 
-	<script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+	<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.7.1/firebase.js"></script>
 	<script>
 	  // Initialize Firebase
 	  var config = {
 	    apiKey: "AIzaSyA1pst5wov2RW3S-ENNv3NY9bNIZK9Ed-Q",
-	    authDomain: "finalexam-16592.firebaseapp.com",
-	    databaseURL: "https://finalexam-16592.firebaseio.com",
-	    projectId: "finalexam-16592",
-	    storageBucket: "finalexam-16592.appspot.com",
-	    messagingSenderId: "302942441974",
-	    appId: "1:302942441974:web:2d4c24f4a511a94a7af7d7",
-	    measurementId: "G-KJW8LNR14H"
+	      authDomain: "finalexam-16592.firebaseapp.com",
+	      databaseURL: "https://finalexam-16592.firebaseio.com",
+	      projectId: "finalexam-16592",
+	      storageBucket: "finalexam-16592.appspot.com",
+	      messagingSenderId: "302942441974",
+	      appId: "1:302942441974:web:2d4c24f4a511a94a7af7d7",
+	      measurementId: "G-KJW8LNR14H"
 	  };
 	  firebase.initializeApp(config);
 	</script>
 
-	<script>
-	var db = firebase.database();
-	function SignUp() {
-		// 這個例子是會創一個 users 的 collection
-
-		var myUserName = document.getElementById("inputUserName").value;
-		var myEmail = document.getElementById("inputEmail").value;
-		var myPassword = document.getElementById("inputPassword").value;
-		var myConfirmPassword = document.getElementById("inputConfirmPassword").value;
-		if (myPassword == myConfirmPassword) {
-			db.ref('/users/' + myUserName).set({
-			password: myPassword,
-		    email: myEmail
-			})
-			.then(function () {alert("建立成功");})
-			.catch(function () {alert("伺服器發生錯誤，請稍後再試");});
-		}else{
-			alert("密碼與確認密碼不同")
-		}
-		
-
-	}</script>
-</script>
-
-
-	
+	 <script> 
+        $(document).ready(function(){  
+            $("#SignUp").click(function(){
+                var email         = $('#inputEmail').val();
+                var password    = $('#inputPassword').val();
+                var ConfirmPassword =$('#inputConfirmPassword').val();
+                if (password == ConfirmPassword) {
+                	firebase.auth().createUserWithEmailAndPassword(email, password).catch((error) => {
+                  // Handle Errors here.
+                  const errorCode = error.code;
+                  const errorMessage = error.message;
+                  // ...
+                  alert(errorMessage)
+                }).then(function (error) { if (error.code != 400) alert("成功創建用戶認證！"); });
+                }else{
+                	alert("密碼與確認密碼不同");
+                } 
+            });                         
+        });         
+    </script>
 </head>
 
 <body>
@@ -62,18 +57,12 @@
           </div>
           <div class="card-body">
             <h5 class="card-title text-center">註冊</h5>
-            <form class="form-signin">
-              <div class="form-label-group">
-                <input type="text" id="inputUserName" class="form-control" placeholder="Username" required autofocus>
-                <label for="inputUserName">帳號</label>
-              </div>
 
               <div class="form-label-group">
                 <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required>
                 <label for="inputEmail">Email</label>
               </div>
-              
-              <hr>
+ 
 
               <div class="form-label-group">
                 <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
@@ -85,16 +74,15 @@
                 <label for="inputConfirmPassword">確認密碼</label>
               </div>
 
-              <button onclick="SignUp()" class="btn btn-lg btn-primary btn-block text-uppercase">註冊</button>
+              <button id="SignUp" class="btn btn-lg btn-primary btn-block text-uppercase">註冊</button>
               <a class="d-block text-center mt-2 small" href="signIn.html">登入</a>
               <hr class="my-4">
               <!-- <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i class="fab fa-google mr-2"></i> Sign up with Google</button>
               <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i class="fab fa-facebook-f mr-2"></i> Sign up with Facebook</button> -->
-            </form>
           </div>
         </div>
       </div>
     </div>
   </div>
-  </body>
+</body>
 </html>
