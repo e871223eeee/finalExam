@@ -1,4 +1,4 @@
-## 可以從此連結去看畫面 ([## 點我](https://e871223eeee.github.io/finalExam/))
+## 可以從此連結去看畫面 ([點我](https://e871223eeee.github.io/finalExam/))
 
 ## Welcome to GitHub Pages
 
